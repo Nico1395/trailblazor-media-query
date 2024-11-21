@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trailblazor.MediaQuery", "Trailblazor.MediaQuery\Trailblazor.MediaQuery.csproj", "{BFCC7373-28B0-49A5-9121-89DCFB3810E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trailblazor.MediaQuery.Tests", "Trailblazor.MediaQuery.Tests\Trailblazor.MediaQuery.Tests.csproj", "{94558267-2D3D-40D1-B02C-1A9291F70B60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trailblazor.MediaQuery.Tests.WASM", "Trailblazor.MediaQuery.Tests.WASM\Trailblazor.MediaQuery.Tests.WASM.csproj", "{BAF90530-ABA0-4228-BD2B-E404B1858076}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFCC7373-28B0-49A5-9121-89DCFB3810E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFCC7373-28B0-49A5-9121-89DCFB3810E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFCC7373-28B0-49A5-9121-89DCFB3810E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFCC7373-28B0-49A5-9121-89DCFB3810E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94558267-2D3D-40D1-B02C-1A9291F70B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94558267-2D3D-40D1-B02C-1A9291F70B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94558267-2D3D-40D1-B02C-1A9291F70B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94558267-2D3D-40D1-B02C-1A9291F70B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF90530-ABA0-4228-BD2B-E404B1858076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF90530-ABA0-4228-BD2B-E404B1858076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF90530-ABA0-4228-BD2B-E404B1858076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF90530-ABA0-4228-BD2B-E404B1858076}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal
