@@ -1,15 +1,23 @@
-﻿using Trailblazor.MediaQuery.Configuration;
-
 namespace Trailblazor.MediaQuery;
 
-internal sealed record MediaQueryContext : IMediaQueryContext
+internal sealed class MediaQueryContext : IMediaQueryContext
 {
-    internal MediaQueryContext() { }
-
-    public required IMediaQueryBreakpoint? Breakpoint { get; init; }
-
-    internal static MediaQueryContext Empty => new()
+    private readonly List<IMediaQueryBreakpoint> _matchingBreakpoints = [];
+    public IReadOnlyList<IMediaQueryBreakpoint> MatchingBreakpoints => _matchingBreakpoints;
+    
+    public bool IsActiveBreakpoint(string breakpointKey)
     {
-        Breakpoint = null,
-    };
+        return _matchingBreakpoints.Any(b => b.Key == breakpointKey);
+    }
+
+    public void UpdateMatchingBreakpoints(IEnumerable<IMediaQueryBreakpoint> breakpoints)
+    {
+        _matchingBreakpoints.Clear();
+        _matchingBreakpoints.AddRange(breakpoints);
+    }
+
+    internal static MediaQueryContext Empty()
+    {
+        return new MediaQueryContext();
+    }
 }

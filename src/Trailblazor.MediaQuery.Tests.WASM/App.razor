@@ -1,12 +1,25 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
-        <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
-    </Found>
-    <NotFound>
-        <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p role="alert">Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
+﻿<MediaQuery CascadingValueName="global" Configuration="@MediaQueryConfiguration">
+    <Router AppAssembly="@typeof(App).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
+        </Found>
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p role="alert">Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</MediaQuery>
+
+@code {
+    private IMediaQueryConfiguration MediaQueryConfiguration = new MediaQueryConfiguration();
+
+    protected override void OnInitialized()
+    {
+        MediaQueryConfiguration.AddBreakpoint("phone", "(max-width:600px)");
+        MediaQueryConfiguration.AddBreakpoint("tablet", "(601px <= width <= 900px)");
+        MediaQueryConfiguration.AddBreakpoint("desktop", "(min-width:901px)");
+    }
+}

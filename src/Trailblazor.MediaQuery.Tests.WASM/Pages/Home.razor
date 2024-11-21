@@ -5,3 +5,20 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
+
+<div style="background:gray;">
+    @GetMatchingBreakpointsString()
+</div>
+
+@code {
+    [CascadingParameter(Name = "global")]
+    private IMediaQueryContext? GlobalContext { get; set; }
+
+    private string GetMatchingBreakpointsString()
+    {
+        if (GlobalContext == null)
+            return "none";
+
+        return string.Join(",", GlobalContext.MatchingBreakpoints.Select(b => b.Key));
+    }
+}
