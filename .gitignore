@@ -401,3 +401,4 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 *.sln.iml
+.idea/
